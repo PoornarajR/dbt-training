@@ -3,7 +3,7 @@ SELECT
     productname, 
     category, 
     subcategory,
-    SUM(profit)
+    SUM(profit) as profit
 FROM {{ ref('STG_ORDERS') }} 
 GROUP BY 
     productID, 
